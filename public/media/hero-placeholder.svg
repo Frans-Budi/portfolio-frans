@@ -1,0 +1,15 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="42" fill="#242323"/>
+  <circle cx="290" cy="168" r="240" fill="#5CE1E6" opacity=".18"/>
+  <circle cx="900" cy="520" r="280" fill="#2CBCC4" opacity=".14"/>
+  <rect x="360" y="70" width="330" height="620" rx="46" fill="#101415" stroke="#5CE1E6" stroke-opacity=".36" stroke-width="3"/>
+  <rect x="390" y="112" width="270" height="536" rx="28" fill="#2E2D2D"/>
+  <rect x="418" y="150" width="150" height="16" rx="8" fill="#5CE1E6"/>
+  <rect x="418" y="196" width="214" height="86" rx="20" fill="#353434"/>
+  <rect x="418" y="306" width="214" height="116" rx="20" fill="#5CE1E6" fill-opacity=".16" stroke="#5CE1E6" stroke-opacity=".22"/>
+  <rect x="418" y="450" width="92" height="92" rx="20" fill="#353434"/>
+  <rect x="540" y="450" width="92" height="92" rx="20" fill="#353434"/>
+  <path d="M765 245h190a36 36 0 0 1 36 36v140a36 36 0 0 1-36 36H765a36 36 0 0 1-36-36V281a36 36 0 0 1 36-36Z" fill="#2E2D2D" stroke="#5CE1E6" stroke-opacity=".24"/>
+  <text x="780" y="326" fill="#F5F7F7" font-family="Arial" font-size="38" font-weight="700">Mobile-first</text>
+  <text x="780" y="374" fill="#5CE1E6" font-family="Arial" font-size="28">Fintech • Education</text>
+</svg>

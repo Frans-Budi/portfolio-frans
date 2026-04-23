@@ -1,0 +1,8 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="36" fill="#242323"/>
+  <rect x="180" y="125" width="840" height="510" rx="42" fill="#2E2D2D" stroke="#5CE1E6" stroke-opacity=".22"/>
+  <rect x="270" y="230" width="330" height="74" rx="28" fill="#353434"/>
+  <rect x="590" y="350" width="330" height="74" rx="28" fill="#5CE1E6" fill-opacity=".16"/>
+  <rect x="270" y="470" width="330" height="74" rx="28" fill="#353434"/>
+  <text x="385" y="615" fill="#F5F7F7" font-family="Arial" font-size="48" font-weight="700">WhatsApp Clone</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="36" fill="#242323"/>
+  <circle cx="600" cy="360" r="210" fill="#5CE1E6" opacity=".12"/>
+  <rect x="220" y="180" width="760" height="400" rx="42" fill="#2E2D2D" stroke="#5CE1E6" stroke-opacity=".24"/>
+  <rect x="300" y="260" width="320" height="72" rx="24" fill="#353434"/>
+  <rect x="580" y="370" width="320" height="72" rx="24" fill="#5CE1E6" fill-opacity=".16"/>
+  <text x="420" y="540" fill="#F5F7F7" font-family="Arial" font-size="50" font-weight="700">AI Chat App</text>
+</svg>
