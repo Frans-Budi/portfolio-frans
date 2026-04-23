@@ -29,13 +29,12 @@ export default function Home() {
             Flutter Mobile Developer
           </Badge>
           <h1 className="mt-6 max-w-4xl font-heading text-5xl font-semibold tracking-tight sm:text-6xl lg:text-7xl">
-            Building real-world mobile-first products across fintech, education,
-            and digital business.
+            Building real-world mobile-first products across fintech, education, and digital
+            business.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
-            I am Frans Budi Kashira, a Flutter-focused mobile developer with 4+
-            years of programming experience, freelance product work, and startup
-            CTO background.
+            I am Frans Budi Kashira, a Flutter-focused mobile developer with 4+ years of programming
+            experience, freelance product work, and startup CTO background.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button asChild className="h-11 bg-primary text-primary-foreground">
@@ -56,7 +55,10 @@ export default function Home() {
           </div>
           <div className="mt-10 grid max-w-2xl gap-3 sm:grid-cols-3">
             {heroStats.map((stat) => (
-              <div key={stat.label} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+              <div
+                key={stat.label}
+                className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+              >
                 <p className="font-heading text-2xl font-semibold text-primary">{stat.value}</p>
                 <p className="mt-1 text-xs text-muted-foreground">{stat.label}</p>
               </div>

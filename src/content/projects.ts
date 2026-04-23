@@ -45,12 +45,13 @@ export const projects: Project[] = [
       "Tap Payments",
       "Cloud Functions",
     ],
-    thumbnail: "/media/project-cpay-cover.svg",
-    heroImage: "/media/project-cpay-cover.svg",
+    thumbnail: "/media/project-cpay-cover.webp",
+    heroImage: "/media/project-cpay-cover.webp",
     gallery: [
-      "/media/project-cpay-cover.svg",
-      "/media/project-cpay-flow.svg",
-      "/media/project-cpay-admin.svg",
+      "/media/project-cpay-cover.webp",
+      "/media/project-cpay-features.webp",
+      "/media/project-cpay-web-cover.webp",
+      "/media/project-cpay-web-features.webp",
     ],
     role: "End-to-end freelance developer",
     duration: "Jul 2025 - Apr 2026",
@@ -102,9 +103,9 @@ export const projects: Project[] = [
     longSummary:
       "Fit Lit guides children through physical activities and later expanded into a school assessment platform where teachers evaluate students and students view transparent scores.",
     stack: ["Flutter", "Firebase", "Cloud Functions", "Remote Config", "Offline-first"],
-    thumbnail: "/media/project-fitlit-cover.svg",
-    heroImage: "/media/project-fitlit-cover.svg",
-    gallery: ["/media/project-fitlit-cover.svg", "/media/project-fitlit-flow.svg"],
+    thumbnail: "/media/project-fitlit-cover.webp",
+    heroImage: "/media/project-fitlit-cover.webp",
+    gallery: ["/media/project-fitlit-cover.webp", "/media/project-fitlit-flow.svg"],
     demoUrl: "https://www.youtube.com/watch?v=wozB7r4sTOo",
     role: "Flutter mobile developer",
     duration: "Jan 2025 - Jul 2025",
@@ -150,9 +151,9 @@ export const projects: Project[] = [
     longSummary:
       "BangunAja x KuliKu was a startup product focused on helping consumers find trusted construction partners for repair and building needs.",
     stack: ["Startup CTO", "Product Strategy", "Mobile Product", "Validation", "Marketplace"],
-    thumbnail: "/media/project-bangunaja-cover.svg",
-    heroImage: "/media/project-bangunaja-cover.svg",
-    gallery: ["/media/project-bangunaja-cover.svg"],
+    thumbnail: "/media/project-bangunaja-cover.webp",
+    heroImage: "/media/project-bangunaja-cover.webp",
+    gallery: ["/media/project-bangunaja-cover.webp"],
     role: "CTO & Founder",
     duration: "Jan 2023 - Feb 2024",
     featured: true,
@@ -193,9 +194,9 @@ export const projects: Project[] = [
     longSummary:
       "Presence helps organizations manage employee attendance with secure authentication, roles, profile workflows, recovery flows, and location-aware attendance records.",
     stack: ["Flutter", "Firebase", "Authentication", "Authorization", "Location"],
-    thumbnail: "/media/project-presence-cover.svg",
-    heroImage: "/media/project-presence-cover.svg",
-    gallery: ["/media/project-presence-cover.svg"],
+    thumbnail: "/media/project-presence-cover.webp",
+    heroImage: "/media/project-presence-cover.webp",
+    gallery: ["/media/project-presence-cover.webp"],
     role: "Mobile developer",
     duration: "Supporting project",
     featured: true,
@@ -232,9 +233,9 @@ export const projects: Project[] = [
     longSummary:
       "A multimodal AI application exploring text generation, voice input, and image generation through OpenAI-powered workflows.",
     stack: ["Flutter", "OpenAI", "GPT", "DALL-E 3", "Whisper"],
-    thumbnail: "/media/project-chatgpt-cover.svg",
-    heroImage: "/media/project-chatgpt-cover.svg",
-    gallery: ["/media/project-chatgpt-cover.svg"],
+    thumbnail: "/media/project-chatgpt-cover.webp",
+    heroImage: "/media/project-chatgpt-cover.webp",
+    gallery: ["/media/project-chatgpt-cover.webp"],
     role: "Mobile developer",
     duration: "Supporting project",
     featured: true,
@@ -250,7 +251,11 @@ export const projects: Project[] = [
       "Voice workflow using Whisper.",
       "Image generation using DALL-E 3.",
     ],
-    technicalHighlights: ["OpenAI API integration", "Prompt-driven UX", "Multimodal state handling"],
+    technicalHighlights: [
+      "OpenAI API integration",
+      "Prompt-driven UX",
+      "Multimodal state handling",
+    ],
     featureGroups: [
       {
         title: "AI Modes",
@@ -271,9 +276,9 @@ export const projects: Project[] = [
     longSummary:
       "Chefies helps users decide what to cook by recommending menus from ingredients they already have.",
     stack: ["Flutter", "Machine Learning", "Recommendation UX", "Firebase"],
-    thumbnail: "/media/project-chefies-cover.svg",
-    heroImage: "/media/project-chefies-cover.svg",
-    gallery: ["/media/project-chefies-cover.svg"],
+    thumbnail: "/media/project-chefies-cover.webp",
+    heroImage: "/media/project-chefies-cover.webp",
+    gallery: ["/media/project-chefies-cover.webp"],
     role: "Mobile developer",
     duration: "Supporting project",
     featured: false,
@@ -284,8 +289,16 @@ export const projects: Project[] = [
       "Created a mobile recommendation experience that turns available ingredients into relevant food suggestions.",
     outcome:
       "Chefies demonstrates practical ML-assisted product thinking for everyday consumer decision making.",
-    highlights: ["Ingredient-based recommendations", "Simple consumer UX", "ML-assisted menu ideas"],
-    technicalHighlights: ["Recommendation flow", "Mobile-first form UX", "Firebase-ready data model"],
+    highlights: [
+      "Ingredient-based recommendations",
+      "Simple consumer UX",
+      "ML-assisted menu ideas",
+    ],
+    technicalHighlights: [
+      "Recommendation flow",
+      "Mobile-first form UX",
+      "Firebase-ready data model",
+    ],
     featureGroups: [
       {
         title: "Recommendation",
@@ -302,9 +315,9 @@ export const projects: Project[] = [
     longSummary:
       "A real-time messaging project focused on authentication, media messaging, and presence-state patterns.",
     stack: ["Flutter", "Firebase", "OTP Auth", "Realtime Messaging", "Storage"],
-    thumbnail: "/media/project-whatsapp-clone-cover.svg",
-    heroImage: "/media/project-whatsapp-clone-cover.svg",
-    gallery: ["/media/project-whatsapp-clone-cover.svg"],
+    thumbnail: "/media/project-whatsapp-clone-cover.webp",
+    heroImage: "/media/project-whatsapp-clone-cover.webp",
+    gallery: ["/media/project-whatsapp-clone-cover.webp"],
     role: "Mobile developer",
     duration: "Supporting project",
     featured: false,
@@ -337,9 +350,9 @@ export const projects: Project[] = [
     longSummary:
       "EasyProd helps employees quickly find and manage product data using QR scanning and structured product records.",
     stack: ["Flutter", "QR Scanner", "Product Data", "Mobile Workflow"],
-    thumbnail: "/media/project-easyprod-cover.svg",
-    heroImage: "/media/project-easyprod-cover.svg",
-    gallery: ["/media/project-easyprod-cover.svg"],
+    thumbnail: "/media/project-easyprod-cover.webp",
+    heroImage: "/media/project-easyprod-cover.webp",
+    gallery: ["/media/project-easyprod-cover.webp"],
     role: "Mobile developer",
     duration: "Supporting project",
     featured: false,
@@ -351,7 +364,11 @@ export const projects: Project[] = [
     outcome:
       "EasyProd demonstrates operational app design for inventory-adjacent workflows and employee productivity.",
     highlights: ["QR code scanning", "Product lookup", "Employee-friendly workflow"],
-    technicalHighlights: ["Scanner integration", "Structured product data", "Mobile-first operations"],
+    technicalHighlights: [
+      "Scanner integration",
+      "Structured product data",
+      "Mobile-first operations",
+    ],
     featureGroups: [
       {
         title: "Operations",

@@ -1,9 +1,0 @@
-<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="760" rx="36" fill="#242323"/>
-  <circle cx="230" cy="230" r="160" fill="#4ADE80" opacity=".16"/>
-  <rect x="110" y="110" width="980" height="540" rx="42" fill="#2E2D2D" stroke="#5CE1E6" stroke-opacity=".22"/>
-  <rect x="180" y="180" width="300" height="400" rx="36" fill="#111617"/>
-  <path d="M710 210c80 0 145 65 145 145s-65 145-145 145-145-65-145-145 65-145 145-145Z" fill="#5CE1E6" fill-opacity=".14" stroke="#5CE1E6" stroke-opacity=".32" stroke-width="3"/>
-  <text x="230" y="360" fill="#5CE1E6" font-family="Arial" font-size="54" font-weight="700">Fit Lit</text>
-  <text x="565" y="565" fill="#F5F7F7" font-family="Arial" font-size="38" font-weight="700">Games • Scores • Sync</text>
-</svg>
