@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CtaSection } from "@/components/sections/cta-section";
 import { SectionHeader } from "@/components/sections/section-header";
+import { HeroVisual } from "@/components/projects/hero-visual";
 import { ProjectCard } from "@/components/projects/project-card";
-import { ProjectVisual } from "@/components/projects/project-visual";
 import { VideoCard } from "@/components/projects/video-card";
 import {
   certifications,
@@ -61,15 +61,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="relative">
-          <div className="absolute -inset-8 rounded-full bg-primary/10 blur-3xl" />
-          <ProjectVisual
-            src="/media/hero-placeholder.svg"
-            alt="Portfolio hero mobile product mockup"
-            priority
-            className="relative min-h-130 cyan-glow"
-          />
-        </div>
+        <HeroVisual />
       </section>
 
       <section id="about" className="container-page py-16">
