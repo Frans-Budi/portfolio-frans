@@ -2,13 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Project } from "@/content/projects";
 import { ProjectVisual } from "@/components/projects/project-visual";
 
@@ -38,18 +32,16 @@ export function ProjectCard({ project, priority = false }: ProjectCardProps) {
         <CardTitle className="mt-3 font-heading text-2xl">{project.title}</CardTitle>
       </CardHeader>
       <CardContent className="px-5">
-        <p className="text-sm leading-6 text-muted-foreground">
-          {project.shortSummary}
-        </p>
+        <p className="text-sm leading-6 text-muted-foreground">{project.shortSummary}</p>
         <div className="mt-5 flex flex-wrap gap-2">
           {project.stack.slice(0, 5).map((item) => (
-            <Badge key={item} variant="secondary" className="bg-white/[0.06]">
+            <Badge key={item} variant="secondary" className="bg-white/6">
               {item}
             </Badge>
           ))}
         </div>
       </CardContent>
-      <CardFooter className="border-white/10 bg-white/[0.02] p-5">
+      <CardFooter className="border-white/10 bg-white/2 px-5 py-4">
         <Button asChild variant="ghost" className="w-full justify-between">
           <Link href={`/projects/${project.slug}`}>
             View Case Study

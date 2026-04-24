@@ -127,7 +127,7 @@ export default function Home() {
           <div className="mb-8 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <SectionHeader
               eyebrow="Featured Projects"
-              title="Case studies built around product value, not screenshot dumps."
+              title="Case studies built around product value"
               description="CPay leads the portfolio, followed by education, startup, attendance, AI, and workflow products."
             />
             <Button asChild variant="outline">
