@@ -33,7 +33,7 @@ export function SiteHeader() {
               aria-label="Open profile image"
             >
               <Image
-                src="/images/frans-profile.webp"
+                src="/image/frans-profile.webp"
                 alt="Frans Budi Kashira profile photo"
                 fill
                 sizes="36px"
@@ -130,7 +130,7 @@ export function SiteHeader() {
             </div>
             <div className="relative aspect-4/5 overflow-hidden rounded-lg border border-white/10 bg-secondary shadow-[0_30px_120px_rgba(0,0,0,0.45)]">
               <Image
-                src="/images/frans-profile.webp"
+                src="/image/frans-profile.webp"
                 alt="Frans Budi Kashira profile photo"
                 fill
                 sizes="(max-width: 768px) calc(100vw - 2rem), 28rem"

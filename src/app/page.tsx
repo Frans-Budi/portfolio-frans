@@ -75,7 +75,7 @@ export default function Home() {
             <div className="order-1">
               <div className="relative mx-auto aspect-4/5 w-3/4 overflow-hidden rounded-3xl border border-white/10 bg-card/70 lg:w-full">
                 <Image
-                  src="/images/frans-transparant.webp"
+                  src="/image/frans-transparant.webp"
                   alt="Frans Budi Kashira portrait"
                   fill
                   sizes="(max-width: 1024px) 100vw, 32vw"
