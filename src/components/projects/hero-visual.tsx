@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export function HeroVisual() {
   return (
     <div className="relative isolate reveal">
-      <div className="absolute inset-x-0 -top-8 -bottom-8 rounded-full bg-primary/12 blur-3xl" />
+      <div className="absolute inset-x-0 -top-8 -bottom-8 rounded-full bg-primary/10 blur-3xl" />
       <div className="relative min-h-105 px-2 py-4 sm:min-h-130 sm:px-4 sm:py-6 lg:min-h-160 lg:px-6 lg:py-8">
         <motion.div
           animate={{ y: [0, 6, 0] }}

@@ -36,6 +36,7 @@ export function SiteHeader() {
                 src="/images/frans-profile.webp"
                 alt="Frans Budi Kashira profile photo"
                 fill
+                sizes="36px"
                 className="object-cover"
                 priority
               />
@@ -132,6 +133,7 @@ export function SiteHeader() {
                 src="/images/frans-profile.webp"
                 alt="Frans Budi Kashira profile photo"
                 fill
+                sizes="(max-width: 768px) calc(100vw - 2rem), 28rem"
                 className="object-cover"
                 priority
               />

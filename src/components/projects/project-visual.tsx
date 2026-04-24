@@ -17,11 +17,11 @@ export function ProjectVisual({
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-2xl border border-white/10 bg-secondary grid-texture",
+        "relative overflow-hidden rounded-2xl border border-white/10 bg-secondary",
         className
       )}
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_35%_20%,rgba(92,225,230,0.22),transparent_32rem)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_35%_20%,rgba(92,225,230,0.12),transparent_32rem)]" />
       <Image
         src={src}
         alt={alt}
