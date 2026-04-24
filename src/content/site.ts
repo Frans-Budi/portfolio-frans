@@ -1,4 +1,5 @@
 import {
+  Blocks,
   BriefcaseBusiness,
   GitBranch,
   GraduationCap,
@@ -6,6 +7,8 @@ import {
   Mail,
   Phone,
   Rocket,
+  Smartphone,
+  Users,
   Video,
 } from "lucide-react";
 
@@ -68,6 +71,37 @@ export const heroStats = [
   { label: "Flagship Fintech Build", value: "CPay" },
   { label: "Bachelor’s GPA", value: "3.95" },
 ];
+
+export const aboutStrengths = [
+  {
+    label: "Mobile Delivery",
+    title: "Flutter products built for real usage, not just demos.",
+    description:
+      "I focus on production-minded mobile delivery with clear UX, structured implementation, and practical feature execution across real product constraints.",
+    icon: Smartphone,
+  },
+  {
+    label: "End-to-End Execution",
+    title: "Freelance scope that moves across mobile, web, and backend.",
+    description:
+      "My client work often spans Flutter apps, supporting web flows, Firebase-backed features, and integration-heavy product delivery rather than isolated screens.",
+    icon: Blocks,
+  },
+  {
+    label: "Product Collaboration",
+    title: "Comfortable working with design, backend, and QA teams.",
+    description:
+      "Internship and delivery work taught me how to ship smoothly inside cross-functional teams where alignment and consistency matter as much as code quality.",
+    icon: Users,
+  },
+  {
+    label: "Startup Perspective",
+    title: "Technical execution shaped by validation and product judgment.",
+    description:
+      "My CTO and founder background adds a stronger sense of business reality, prioritization, and validation to how I build and evaluate product decisions.",
+    icon: Rocket,
+  },
+] as const;
 
 export const experienceHighlights = [
   {

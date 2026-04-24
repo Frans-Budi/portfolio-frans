@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Download, Sparkles } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,6 +10,7 @@ import { HeroVisual } from "@/components/projects/hero-visual";
 import { ProjectCard } from "@/components/projects/project-card";
 import { VideoCard } from "@/components/projects/video-card";
 import {
+  aboutStrengths,
   certifications,
   demoVideos,
   experienceHighlights,
@@ -70,26 +72,51 @@ export default function Home() {
 
       <section id="about" className="section-shell section-base">
         <div className="container-page py-16">
-          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
-            <SectionHeader
-              eyebrow="About"
-              title="Mobile developer with product, fintech, and startup context."
-              description="My strongest work combines Flutter implementation with product judgment, backend awareness, and business workflow understanding."
-            />
-            <div className="grid gap-4 sm:grid-cols-2">
-              {[
-                "4+ years programming experience with Flutter as the main production focus.",
-                "Freelance experience building CPay and Fit Lit across mobile, web, backend, and Firebase services.",
-                "Mobile Developer internship at PT Bejana Investidata Globalindo, contributing to Risehand and Dzikra.",
-                "Startup CTO background from BangunAja x KuliKu with validation, partners, incubators, and funding.",
-              ].map((item) => (
-                <Card key={item} className="border-white/10 bg-card">
-                  <CardContent className="p-5 text-sm leading-7 text-muted-foreground">
-                    <Sparkles className="mb-4 size-5 text-primary" />
-                    {item}
-                  </CardContent>
-                </Card>
-              ))}
+          <div className="grid gap-6 lg:grid-cols-[0.4fr_1fr] lg:items-start lg:gap-8">
+            <div className="order-1">
+              <div className="relative mx-auto aspect-4/5 w-3/4 overflow-hidden rounded-3xl border border-white/10 bg-card/70 lg:w-full">
+                <Image
+                  src="/images/frans-transparant.webp"
+                  alt="Frans Budi Kashira portrait"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 32vw"
+                  className="object-contain object-bottom"
+                />
+              </div>
+            </div>
+
+            <div className="order-2">
+              <SectionHeader
+                eyebrow="About"
+                title="Mobile developer with product, fintech, and startup context."
+                description="My strongest work combines Flutter implementation with product judgment, backend awareness, and business workflow understanding."
+              />
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {aboutStrengths.map((item) => {
+                  const Icon = item.icon;
+
+                  return (
+                    <Card key={item.label} className="border-white/10 bg-card">
+                      <CardContent className="px-6 py-3">
+                        <div className="flex items-center gap-3">
+                          <div className="flex size-10 items-center justify-center rounded-xl border border-primary/20 bg-primary/8 text-primary">
+                            <Icon className="size-5" />
+                          </div>
+                          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                            {item.label}
+                          </p>
+                        </div>
+                        <h3 className="mt-5 font-heading text-xl font-semibold leading-snug text-foreground">
+                          {item.title}
+                        </h3>
+                        <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                          {item.description}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
