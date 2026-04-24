@@ -196,7 +196,7 @@ export default function Home() {
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {learningHighlights.map((item) => (
               <Card key={item.title} className="border-white/10 bg-card">
-                <CardContent className="px-5 py-3">
+                <CardContent className="p-5">
                   <p className="text-xs uppercase tracking-[0.2em] text-primary">{item.meta}</p>
                   <h3 className="mt-3 font-heading text-lg font-semibold">{item.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.note}</p>

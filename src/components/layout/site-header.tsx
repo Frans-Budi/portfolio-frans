@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -14,33 +13,40 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { ImagePreviewDialog } from "@/components/ui/image-preview-dialog";
 import { navItems, siteConfig } from "@/content/site";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   return (
     <>
       <header className="sticky inset-x-0 top-0 z-50 w-full border-b border-white/10 bg-background/82 backdrop-blur-xl">
         <div className="container-page flex h-14 md:h-16 items-center justify-between">
           <div className="flex items-center gap-3">
-            <button
-              type="button"
-              onClick={() => setIsProfileOpen(true)}
-              className="relative size-9 overflow-hidden cursor-pointer rounded-xl border border-primary/30 bg-primary/10 shadow-[0_0_35px_rgba(92,225,230,0.18)] transition hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
-              aria-label="Open profile image"
-            >
-              <Image
-                src="/image/frans-profile.webp"
-                alt="Frans Budi Kashira profile photo"
-                fill
-                sizes="36px"
-                className="object-cover"
-                priority
-              />
-            </button>
+            <ImagePreviewDialog
+              src="/images/frans-profile.webp"
+              alt="Frans Budi Kashira profile photo"
+              title="Profile image preview"
+              triggerAriaLabel="Open profile image"
+              priority
+              trigger={
+                <button
+                  type="button"
+                  className="relative size-9 cursor-pointer overflow-hidden rounded-xl border border-primary/30 bg-primary/10 shadow-[0_0_35px_rgba(92,225,230,0.18)] transition hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                >
+                  <Image
+                    src="/images/frans-profile.webp"
+                    alt="Frans Budi Kashira profile photo"
+                    fill
+                    sizes="36px"
+                    className="object-cover"
+                    priority
+                  />
+                </button>
+              }
+            />
             <Link href="/" className="hidden leading-tight sm:block">
               <span className="block font-heading text-sm font-semibold">{siteConfig.name}</span>
               <span className="block text-xs text-muted-foreground">{siteConfig.title}</span>
@@ -106,41 +112,6 @@ export function SiteHeader() {
           </Sheet>
         </div>
       </header>
-
-      {isProfileOpen ? (
-        <div
-          className="fixed inset-0 z-70 flex items-center justify-center bg-black/70 p-4 backdrop-blur-md"
-          onClick={() => setIsProfileOpen(false)}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Profile image preview"
-        >
-          <div className="w-full max-w-md" onClick={(event) => event.stopPropagation()}>
-            <div className="mb-3 flex justify-end">
-              <Button
-                type="button"
-                variant="outline"
-                size="icon-lg"
-                className="rounded-full border-white/15 bg-background/80 backdrop-blur cursor-pointer"
-                onClick={() => setIsProfileOpen(false)}
-                aria-label="Close profile image preview"
-              >
-                <X className="size-6" />
-              </Button>
-            </div>
-            <div className="relative aspect-4/5 overflow-hidden rounded-lg border border-white/10 bg-secondary shadow-[0_30px_120px_rgba(0,0,0,0.45)]">
-              <Image
-                src="/image/frans-profile.webp"
-                alt="Frans Budi Kashira profile photo"
-                fill
-                sizes="(max-width: 768px) calc(100vw - 2rem), 28rem"
-                className="object-cover"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      ) : null}
     </>
   );
 }
