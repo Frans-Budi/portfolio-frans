@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CtaSection } from "@/components/sections/cta-section";
 import { SectionHeader } from "@/components/sections/section-header";
+import { StackCard } from "@/components/sections/stack-card";
 import { HeroVisual } from "@/components/projects/hero-visual";
 import { ProjectCard } from "@/components/projects/project-card";
 import { VideoCard } from "@/components/projects/video-card";
@@ -149,23 +150,12 @@ export default function Home() {
         <div className="container-page py-16">
           <SectionHeader
             eyebrow="Core Stack"
-            title="Grouped skills for mobile-first product delivery."
-            description="The stack reflects Flutter delivery, backend integration, fintech workflow implementation, and practical tooling."
+            title="Capability-first stack for shipping real-world products."
+            description="The section highlights the areas I rely on most when delivering Flutter products, supporting product flows, payment logic, and day-to-day engineering workflow."
           />
-          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
             {skillGroups.map((group) => (
-              <Card key={group.title} className="border-white/10 bg-card">
-                <CardContent className="p-6">
-                  <h3 className="font-heading text-lg font-semibold">{group.title}</h3>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {group.items.map((item) => (
-                      <Badge key={item} variant="secondary" className="bg-white/6">
-                        {item}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <StackCard key={group.title} group={group} />
             ))}
           </div>
         </div>

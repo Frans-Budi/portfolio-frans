@@ -1,5 +1,6 @@
 import {
   Blocks,
+  Database,
   BriefcaseBusiness,
   GitBranch,
   GraduationCap,
@@ -7,9 +8,12 @@ import {
   Mail,
   Phone,
   Rocket,
+  ServerCog,
   Smartphone,
   Users,
   Video,
+  Wallet,
+  Wrench,
 } from "lucide-react";
 
 export const siteConfig = {
@@ -133,25 +137,73 @@ export const experienceHighlights = [
 export const skillGroups = [
   {
     title: "Mobile Development",
-    items: ["Flutter", "Dart", "Native Android", "Kotlin", "State Management"],
+    description: "Shipping production-ready Flutter experiences across real product flows.",
+    icon: Smartphone,
+    emphasis: "primary",
+    items: [
+      { label: "Flutter", logoSrc: "/tech-logo/flutter.svg" },
+      { label: "Dart", logoSrc: "/tech-logo/dart.svg" },
+      { label: "Native Android", logoSrc: "/tech-logo/android.svg" },
+      { label: "Kotlin", logoSrc: "/tech-logo/kotlin.svg" },
+      { label: "State Management" },
+    ],
   },
   {
     title: "Backend & Web",
-    items: ["Next.js", "Express.js", "Laravel", "REST API", "Vue.js"],
+    description: "Supporting product flows, APIs, dashboards, and integration-heavy delivery.",
+    icon: ServerCog,
+    emphasis: "secondary",
+    items: [
+      { label: "Next.js", logoSrc: "/tech-logo/nextdotjs.svg" },
+      { label: "Express.js", logoSrc: "/tech-logo/express.svg" },
+      { label: "Laravel", logoSrc: "/tech-logo/laravel.svg" },
+      { label: "REST API" },
+      { label: "Vue.js", logoSrc: "/tech-logo/vuedotjs.svg" },
+    ],
   },
   {
     title: "Payments & Fintech",
-    items: ["Tap Payments", "Payment Links", "Refunds", "Fee Logic", "Analytics"],
+    description: "Implementing transaction logic, payment links, refund flows, and reporting.",
+    icon: Wallet,
+    emphasis: "secondary",
+    items: [
+      { label: "Tap Payments" },
+      { label: "Payment Links" },
+      { label: "Refunds" },
+      { label: "Fee Logic" },
+      { label: "Analytics" },
+    ],
   },
   {
     title: "Databases & Services",
-    items: ["Firebase", "Supabase", "Cloud Firestore", "PostgreSQL", "MongoDB"],
+    description: "Delivering across managed app services, persistence, and cloud-backed features.",
+    icon: Database,
+    emphasis: "supporting",
+    items: [
+      { label: "Firebase", logoSrc: "/tech-logo/firebase.svg" },
+      { label: "Supabase", logoSrc: "/tech-logo/supabase.svg" },
+      { label: "Cloud Firestore" },
+      { label: "PostgreSQL", logoSrc: "/tech-logo/postgresql.svg" },
+      { label: "MongoDB", logoSrc: "/tech-logo/mongodb.svg" },
+    ],
   },
   {
     title: "Tools & Workflow",
-    items: ["Git", "GitHub", "Figma", "Postman", "Xcode", "Android Studio"],
+    description: "Using practical engineering tools and AI assistance to move delivery faster.",
+    icon: Wrench,
+    emphasis: "supporting",
+    items: [
+      { label: "Git", logoSrc: "/tech-logo/git.svg" },
+      { label: "Figma", logoSrc: "/tech-logo/figma.svg" },
+      { label: "Postman", logoSrc: "/tech-logo/postman.svg" },
+      { label: "Xcode", logoSrc: "/tech-logo/xcode.svg" },
+      { label: "Android Studio", logoSrc: "/tech-logo/androidstudio.svg" },
+      { label: "Codex", logoSrc: "/tech-logo/codex.svg" },
+      { label: "GitHub Copilot", logoSrc: "/tech-logo/githubcopilot.svg" },
+      { label: "ChatGPT", logoSrc: "/tech-logo/openai.svg" },
+    ],
   },
-];
+] as const;
 
 export const certifications = [
   {
