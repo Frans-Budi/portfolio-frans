@@ -60,6 +60,31 @@ export function CaseStudyTemplate({ project }: CaseStudyTemplateProps) {
         <StoryBlock title="Outcome" body={project.outcome} />
       </section>
 
+      {project.demoUrl ? (
+        <section className="container-page py-8">
+          <div className="rounded-3xl border border-white/10 bg-card/75 p-6 lg:p-7">
+            <p className="text-sm font-semibold uppercase tracking-[0.26em] text-primary">
+              Product Demo
+            </p>
+            <div className="mt-4 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+              <div className="max-w-2xl">
+                <h2 className="font-heading text-2xl font-semibold">See the workflow in motion.</h2>
+                <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                  This project includes a recorded walkthrough that shows the core product flow more
+                  clearly than static screenshots alone.
+                </p>
+              </div>
+              <Button asChild className="bg-primary text-primary-foreground">
+                <Link href={project.demoUrl} target="_blank" rel="noreferrer">
+                  Watch Demo
+                  <ExternalLink className="size-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <section className="container-page grid gap-8 py-12 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.26em] text-primary">

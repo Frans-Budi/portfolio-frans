@@ -45,12 +45,25 @@ export default function ContactPage() {
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           {socials.map((social) => {
-            const Icon = social.icon;
-
             return (
               <Card key={social.href} className="border-white/10 bg-card">
                 <CardContent className="p-6">
-                  <Icon className="size-6 text-primary" />
+                  <div className="flex size-11 items-center justify-center rounded-2xl border border-primary/20 bg-primary/8">
+                    <span
+                      className="size-5 bg-primary"
+                      aria-hidden="true"
+                      style={{
+                        WebkitMaskImage: `url("${social.logoSrc}")`,
+                        maskImage: `url("${social.logoSrc}")`,
+                        WebkitMaskPosition: "center",
+                        maskPosition: "center",
+                        WebkitMaskRepeat: "no-repeat",
+                        maskRepeat: "no-repeat",
+                        WebkitMaskSize: "contain",
+                        maskSize: "contain",
+                      }}
+                    />
+                  </div>
                   <h2 className="mt-5 font-heading text-xl font-semibold">{social.label}</h2>
                   <p className="mt-3 text-sm leading-6 text-muted-foreground">
                     {social.priority

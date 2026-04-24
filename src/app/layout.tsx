@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    images: [{ url: "/media/og-portfolio.svg", width: 1200, height: 630 }],
+    images: [{ url: "/media/og-portfolio.webp", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Frans Budi Kashira - Flutter Mobile Developer",
     description: siteConfig.description,
-    images: ["/media/og-portfolio.svg"],
+    images: ["/media/og-portfolio.webp"],
   },
 };
 

@@ -9,13 +9,11 @@ import { SectionHeader } from "@/components/sections/section-header";
 import { StackCard } from "@/components/sections/stack-card";
 import { HeroVisual } from "@/components/projects/hero-visual";
 import { ProjectCard } from "@/components/projects/project-card";
-import { VideoCard } from "@/components/projects/video-card";
 import {
   aboutStrengths,
-  certifications,
-  demoVideos,
   experienceHighlights,
   heroStats,
+  learningHighlights,
   siteConfig,
   skillGroups,
 } from "@/content/site";
@@ -179,7 +177,7 @@ export default function Home() {
                       {item.period}
                     </p>
                     <h3 className="mt-3 font-heading text-xl font-semibold">{item.title}</h3>
-                    <p className="mt-1 text-sm text-primary">{item.organization}</p>
+                    <p className="mt-1 text-sm text-primary font-medium">{item.organization}</p>
                     <p className="mt-4 text-sm leading-6 text-muted-foreground">{item.summary}</p>
                   </CardContent>
                 </Card>
@@ -189,34 +187,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell section-alt section-glow">
-        <div className="container-page py-16">
-          <SectionHeader
-            eyebrow="Demo Videos"
-            title="Thumbnail-first demos keep the site fast."
-            description="Video content is represented as lightweight preview cards so embeds do not slow the first load."
-          />
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {demoVideos.map((video) => (
-              <VideoCard key={video.title} {...video} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="section-shell section-base">
         <div className="container-page py-16">
           <SectionHeader
-            eyebrow="Achievements"
-            title="Education and certifications that reinforce the portfolio."
+            eyebrow="Learning & Education"
+            title="Compact credibility from education and focused upskilling."
           />
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {certifications.map((item) => (
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {learningHighlights.map((item) => (
               <Card key={item.title} className="border-white/10 bg-card">
-                <CardContent className="p-6">
-                  <p className="text-sm text-primary">{item.provider}</p>
-                  <h3 className="mt-2 font-heading text-xl font-semibold">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-muted-foreground">{item.note}</p>
+                <CardContent className="px-5 py-3">
+                  <p className="text-xs uppercase tracking-[0.2em] text-primary">{item.meta}</p>
+                  <h3 className="mt-3 font-heading text-lg font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.note}</p>
                 </CardContent>
               </Card>
             ))}

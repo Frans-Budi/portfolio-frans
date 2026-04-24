@@ -1,9 +1,0 @@
-<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" fill="#242323"/>
-  <circle cx="1000" cy="80" r="300" fill="#5CE1E6" opacity=".16"/>
-  <circle cx="180" cy="520" r="260" fill="#2CBCC4" opacity=".14"/>
-  <rect x="72" y="74" width="1056" height="482" rx="42" fill="#2E2D2D" stroke="#5CE1E6" stroke-opacity=".22"/>
-  <text x="120" y="244" fill="#F5F7F7" font-family="Arial" font-size="72" font-weight="700">Frans Budi Kashira</text>
-  <text x="120" y="322" fill="#5CE1E6" font-family="Arial" font-size="42" font-weight="700">Flutter Mobile Developer</text>
-  <text x="120" y="392" fill="#B8C0C2" font-family="Arial" font-size="30">Fintech • Education • Startup Products</text>
-</svg>

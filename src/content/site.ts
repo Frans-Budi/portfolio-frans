@@ -2,16 +2,12 @@ import {
   Blocks,
   Database,
   BriefcaseBusiness,
-  GitBranch,
-  GraduationCap,
-  Link2,
-  Mail,
+  Laptop,
   Phone,
   Rocket,
   ServerCog,
   Smartphone,
   Users,
-  Video,
   Wallet,
   Wrench,
 } from "lucide-react";
@@ -41,31 +37,44 @@ export const socials = [
   {
     label: "LinkedIn",
     href: "http://linkedin.com/in/frans-budi-kashira/",
-    icon: Link2,
+    logoSrc: "/social-media-logo/linkedin.svg",
     priority: true,
   },
   {
     label: "GitHub",
     href: "http://github.com/Frans-Budi",
-    icon: GitBranch,
+    logoSrc: "/tech-logo/github.svg",
     priority: true,
   },
   {
     label: "Email",
     href: `mailto:${siteConfig.email}`,
-    icon: Mail,
+    logoSrc: "/social-media-logo/gmail.svg",
     priority: true,
   },
   {
     label: "WhatsApp",
     href: siteConfig.whatsappUrl,
     icon: Phone,
+    logoSrc: "/social-media-logo/whatsapp.svg",
     priority: true,
   },
   {
-    label: "YouTube Demo",
-    href: "https://www.youtube.com/watch?v=wozB7r4sTOo",
-    icon: Video,
+    label: "YouTube",
+    href: "https://www.youtube.com/@fransbudi21",
+    logoSrc: "/social-media-logo/youtube.svg",
+    priority: false,
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/fransbudi21",
+    logoSrc: "/social-media-logo/instagram.svg",
+    priority: false,
+  },
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@fransbudi21",
+    logoSrc: "/social-media-logo/tiktok.svg",
     priority: false,
   },
 ];
@@ -114,7 +123,7 @@ export const experienceHighlights = [
     period: "Jan 2025 - Apr 2026",
     summary:
       "Built Flutter mobile apps, Next.js payment pages, Firebase-backed features, and backend services for real client products.",
-    icon: BriefcaseBusiness,
+    icon: Laptop,
   },
   {
     title: "Mobile Developer Intern",
@@ -122,7 +131,7 @@ export const experienceHighlights = [
     period: "Sep 2024 - Dec 2024",
     summary:
       "Delivered Flutter features for Risehand and Dzikra while collaborating with UI/UX, backend, and QA teams.",
-    icon: Rocket,
+    icon: BriefcaseBusiness,
   },
   {
     title: "CTO & Founder",
@@ -130,7 +139,7 @@ export const experienceHighlights = [
     period: "Jan 2023 - Feb 2024",
     summary:
       "Led a construction-service startup, recruited 16+ partners, validated product demand, joined incubators, and secured early funding.",
-    icon: GraduationCap,
+    icon: Rocket,
   },
 ];
 
@@ -230,19 +239,20 @@ export const certifications = [
   },
 ];
 
-export const demoVideos = [
+export const learningHighlights = [
   {
-    title: "Fit Lit Flutter Demo",
-    project: "Fit Lit",
-    note: "Interactive sports app demo showing guided games and progress flow.",
-    youtubeUrl: "https://www.youtube.com/watch?v=wozB7r4sTOo",
-    thumbnail: "/media/demo-fitlit-thumb.svg",
+    title: "Bangkit Academy 2024",
+    meta: "Google, GoTo, Traveloka",
+    note: "Mobile Development cohort selected from 55,000 participants.",
   },
   {
-    title: "CPay Platform Preview",
-    project: "CPay",
-    note: "Placeholder preview slot for the flagship fintech workflow demo.",
-    youtubeUrl: "",
-    thumbnail: "/media/demo-cpay-thumb.svg",
+    title: "Digital Business Degree",
+    meta: "Indonesia University of Education",
+    note: "Graduated with GPA 3.95/4.00 across 147 credits.",
   },
-];
+  {
+    title: "Android & Kotlin Track",
+    meta: "Dicoding",
+    note: "Selected certifications across Kotlin, Android fundamentals, and intermediate Android.",
+  },
+] as const;

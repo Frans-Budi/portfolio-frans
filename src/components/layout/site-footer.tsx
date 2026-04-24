@@ -8,8 +8,8 @@ export function SiteFooter() {
         <div>
           <p className="font-heading text-xl font-semibold">{siteConfig.name}</p>
           <p className="mt-3 max-w-md text-sm leading-6 text-muted-foreground">
-            Flutter-focused mobile developer building real-world products across
-            fintech, education, startup, and freelance product development.
+            Flutter-focused mobile developer building real-world products across fintech, education,
+            startup, and freelance product development.
           </p>
         </div>
         <div>
@@ -30,28 +30,38 @@ export function SiteFooter() {
           <p className="text-sm font-semibold text-foreground">Connect</p>
           <div className="mt-3 flex flex-wrap gap-2">
             {socials.map((social) => {
-              const Icon = social.icon;
-
               return (
                 <Link
                   key={social.href}
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex size-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-muted-foreground transition hover:border-primary/50 hover:text-primary"
+                  className="inline-flex size-9 items-center justify-center rounded-full border border-white/10 bg-white/3 text-muted-foreground transition hover:border-primary/50 hover:text-primary"
                   aria-label={social.label}
                 >
-                  <Icon className="size-4" />
+                  <span
+                    className="size-4 bg-current"
+                    style={{
+                      WebkitMaskImage: `url("${social.logoSrc}")`,
+                      maskImage: `url("${social.logoSrc}")`,
+                      WebkitMaskPosition: "center",
+                      maskPosition: "center",
+                      WebkitMaskRepeat: "no-repeat",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskSize: "contain",
+                      maskSize: "contain",
+                    }}
+                  />
                 </Link>
               );
             })}
           </div>
           <p className="mt-4 text-sm text-muted-foreground">{siteConfig.email}</p>
+          <p className="mt-1 text-sm text-muted-foreground">{siteConfig.phone}</p>
         </div>
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} {siteConfig.name}. Built as a static
-        product-focused portfolio.
+        © {new Date().getFullYear()} {siteConfig.name}. Built as a static product-focused portfolio.
       </div>
     </footer>
   );
