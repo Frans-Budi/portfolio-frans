@@ -23,8 +23,8 @@ export default function Home() {
 
   return (
     <>
-      <section className="container-page grid gap-12 pb-16 pt-14 lg:grid-cols-[1fr_0.92fr] lg:items-center lg:pb-24">
-        <div className="reveal">
+      <section className="container-page grid gap-10 pb-16 pt-10 lg:grid-cols-[1fr_0.92fr] lg:items-center lg:gap-12 lg:pb-24 lg:pt-14">
+        <div className="order-2 reveal lg:order-1">
           <Badge variant="outline" className="border-primary/30 text-primary">
             Flutter Mobile Developer
           </Badge>
@@ -61,7 +61,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <HeroVisual />
+        <div className="order-1 lg:order-2">
+          <HeroVisual />
+        </div>
       </section>
 
       <section id="about" className="container-page py-16">

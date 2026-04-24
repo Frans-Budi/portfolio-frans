@@ -127,10 +127,12 @@
       radial-gradient(circle at 15% 10%, rgb(92 225 230 / 12%), transparent 30rem),
       radial-gradient(circle at 85% 0%, rgb(44 188 196 / 10%), transparent 28rem),
       #242323;
+    overflow-x: clip;
   }
   html {
     @apply font-sans;
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 }
 
