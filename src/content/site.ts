@@ -66,7 +66,7 @@ export const socials = [
 export const heroStats = [
   { label: "Programming Experience", value: "4+ yrs" },
   { label: "Flagship Fintech Build", value: "CPay" },
-  { label: "UPI GPA", value: "3.95" },
+  { label: "Bachelor’s GPA", value: "3.95" },
 ];
 
 export const experienceHighlights = [
