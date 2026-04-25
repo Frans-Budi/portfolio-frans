@@ -39,8 +39,8 @@ export function SiteHeader() {
                   <Image
                     src="/images/frans-profile.webp"
                     alt="Frans Budi Kashira profile photo"
-                    fill
-                    sizes="36px"
+                    width={36}
+                    height={36}
                     className="object-cover"
                     priority
                   />
