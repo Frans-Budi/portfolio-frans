@@ -26,7 +26,7 @@ export function SiteHeader() {
         <div className="container-page flex h-14 md:h-16 items-center justify-between">
           <div className="flex items-center gap-3">
             <ImagePreviewDialog
-              src="/images/frans-profile.webp"
+              src="/image/frans-profile.webp"
               alt="Frans Budi Kashira profile photo"
               title="Profile image preview"
               triggerAriaLabel="Open profile image"
@@ -37,10 +37,10 @@ export function SiteHeader() {
                   className="relative size-9 cursor-pointer overflow-hidden rounded-xl border border-primary/30 bg-primary/10 shadow-[0_0_35px_rgba(92,225,230,0.18)] transition hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
                 >
                   <Image
-                    src="/images/frans-profile.webp"
+                    src="/image/frans-profile.webp"
                     alt="Frans Budi Kashira profile photo"
-                    width={36}
-                    height={36}
+                    fill
+                    sizes="36px"
                     className="object-cover"
                     priority
                   />
