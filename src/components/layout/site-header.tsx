@@ -21,7 +21,6 @@ import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const isHomepage = pathname === "/";
   const [isHeaderHidden, setIsHeaderHidden] = useState(false);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false);
@@ -29,8 +28,6 @@ export function SiteHeader() {
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (!isHomepage) return;
-
     const delta = latest - lastScrollY.current;
 
     if (latest <= 24 || isSheetOpen || isProfileDialogOpen) {
@@ -50,7 +47,7 @@ export function SiteHeader() {
     lastScrollY.current = latest;
   });
 
-  const shouldHide = isHomepage && isHeaderHidden && !isSheetOpen && !isProfileDialogOpen;
+  const shouldHide = isHeaderHidden && !isSheetOpen && !isProfileDialogOpen;
 
   return (
     <>
