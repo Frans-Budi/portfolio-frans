@@ -184,6 +184,7 @@ export function CaseStudyTemplate({ project }: CaseStudyTemplateProps) {
             <ProjectVisual
               key={`${project.slug}-${image}`}
               src={image}
+              previewSrc={project.galleryPreview?.[index]}
               alt={`${project.title} visual ${index + 1}`}
               className="aspect-video rounded-lg"
             />

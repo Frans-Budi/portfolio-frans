@@ -8,10 +8,12 @@ export type Project = {
   longSummary: string;
   stack: string[];
   thumbnail: string;
+  thumbnailPreview?: string;
   heroImage: string;
   heroMockupLeft?: string;
   heroMockupRight?: string;
   gallery: string[];
+  galleryPreview?: string[];
   demoUrl?: string;
   role: string;
   duration: string;
@@ -48,6 +50,7 @@ export const projects: Project[] = [
       "Cloud Functions",
     ],
     thumbnail: "/media/project-cpay-cover.webp",
+    thumbnailPreview: "/media/project-cpay-cover-hd.webp",
     heroImage: "/media/project-cpay-cover.webp",
     heroMockupLeft: "/media/mock-cpay-left.webp",
     heroMockupRight: "/media/mock-cpay-right.webp",
@@ -56,6 +59,12 @@ export const projects: Project[] = [
       "/media/project-cpay-features.webp",
       "/media/project-cpay-web-cover.webp",
       "/media/project-cpay-web-features.webp",
+    ],
+    galleryPreview: [
+      "/media/project-cpay-cover-hd.webp",
+      "/media/project-cpay-features-hd.webp",
+      "/media/project-cpay-web-cover-hd.webp",
+      "/media/project-cpay-web-features-hd.webp",
     ],
     demoUrl: "https://youtu.be/EiGg9tmOlE4?si=Wnd-zEYzC7hzC0td",
     role: "End-to-end freelance developer",
@@ -109,6 +118,7 @@ export const projects: Project[] = [
       "Fit Lit guides children through physical activities and later expanded into a school assessment platform where teachers evaluate students and students view transparent scores.",
     stack: ["Flutter", "Firebase", "Cloud Functions", "Remote Config", "Offline-first"],
     thumbnail: "/media/project-fitlit-cover.webp",
+    thumbnailPreview: "/media/project-fitlit-cover-hd.webp",
     heroImage: "/media/project-fitlit-cover.webp",
     heroMockupLeft: "/media/mock-fitlit-left.webp",
     heroMockupRight: "/media/mock-fitlit-right.webp",
@@ -116,6 +126,11 @@ export const projects: Project[] = [
       "/media/project-fitlit-cover.webp",
       "/media/project-fitlit-system.webp",
       "/media/project-fitlit-features.webp",
+    ],
+    galleryPreview: [
+      "/media/project-fitlit-cover-hd.webp",
+      "/media/project-fitlit-system-hd.webp",
+      "/media/project-fitlit-features-hd.webp",
     ],
     demoUrl: "https://www.youtube.com/watch?v=wozB7r4sTOo",
     role: "Flutter mobile developer",
@@ -163,10 +178,15 @@ export const projects: Project[] = [
       "BangunAja x KuliKu was a startup product focused on helping consumers find trusted construction partners for repair and building needs.",
     stack: ["Startup CTO", "Product Strategy", "Mobile Product", "Validation", "Marketplace"],
     thumbnail: "/media/project-bangunaja-cover.webp",
+    thumbnailPreview: "/media/project-bangunaja-cover-hd.webp",
     heroImage: "/media/project-bangunaja-cover.webp",
     heroMockupLeft: "/media/mock-bangunAja-left.webp",
     heroMockupRight: "/media/mock-bangunAja-right.webp",
     gallery: ["/media/project-bangunaja-cover.webp", "/media/project-bangunaja-features.webp"],
+    galleryPreview: [
+      "/media/project-bangunaja-cover-hd.webp",
+      "/media/project-bangunaja-features-hd.webp",
+    ],
     role: "CTO & Founder",
     duration: "Jan 2023 - Feb 2024",
     featured: true,
@@ -208,10 +228,15 @@ export const projects: Project[] = [
       "Presence helps organizations manage employee attendance with secure authentication, roles, profile workflows, recovery flows, and location-aware attendance records.",
     stack: ["Flutter", "Firebase", "Authentication", "Authorization", "Location"],
     thumbnail: "/media/project-presence-cover.webp",
+    thumbnailPreview: "/media/project-presence-cover-hd.webp",
     heroImage: "/media/project-presence-cover.webp",
     heroMockupLeft: "/media/mock-presence-left.webp",
     heroMockupRight: "/media/mock-presence-right.webp",
     gallery: ["/media/project-presence-cover.webp", "/media/project-presence-features.webp"],
+    galleryPreview: [
+      "/media/project-presence-cover-hd.webp",
+      "/media/project-presence-features-hd.webp",
+    ],
     role: "Mobile developer",
     duration: "Supporting project",
     featured: true,
@@ -249,10 +274,15 @@ export const projects: Project[] = [
       "A multimodal AI application exploring text generation, voice input, and image generation through OpenAI-powered workflows.",
     stack: ["Flutter", "OpenAI", "GPT", "DALL-E 3", "Whisper"],
     thumbnail: "/media/project-chatgpt-cover.webp",
+    thumbnailPreview: "/media/project-chatgpt-cover-hd.webp",
     heroImage: "/media/project-chatgpt-cover.webp",
     heroMockupLeft: "/media/mock-chatgpt-left.webp",
     heroMockupRight: "/media/mock-chatgpt-right.webp",
     gallery: ["/media/project-chatgpt-cover.webp", "/media/project-chatgpt-features.webp"],
+    galleryPreview: [
+      "/media/project-chatgpt-cover-hd.webp",
+      "/media/project-chatgpt-features-hd.webp",
+    ],
     role: "Mobile developer",
     duration: "Supporting project",
     featured: true,
@@ -294,10 +324,15 @@ export const projects: Project[] = [
       "Chefies helps users decide what to cook by recommending menus from ingredients they already have.",
     stack: ["Flutter", "Machine Learning", "Recommendation UX", "Firebase"],
     thumbnail: "/media/project-chefies-cover.webp",
+    thumbnailPreview: "/media/project-chefies-cover-hd.webp",
     heroImage: "/media/project-chefies-cover.webp",
     heroMockupLeft: "/media/mock-chefies-left.webp",
     heroMockupRight: "/media/mock-chefies-right.webp",
     gallery: ["/media/project-chefies-cover.webp", "/media/project-chefies-features.webp"],
+    galleryPreview: [
+      "/media/project-chefies-cover-hd.webp",
+      "/media/project-chefies-features-hd.webp",
+    ],
     role: "Mobile developer",
     duration: "Supporting project",
     featured: false,
@@ -335,12 +370,17 @@ export const projects: Project[] = [
       "A real-time messaging project focused on authentication, media messaging, and presence-state patterns.",
     stack: ["Flutter", "Firebase", "OTP Auth", "Realtime Messaging", "Storage"],
     thumbnail: "/media/project-whatsapp-clone-cover.webp",
+    thumbnailPreview: "/media/project-whatsapp-clone-cover-hd.webp",
     heroImage: "/media/project-whatsapp-clone-cover.webp",
     heroMockupLeft: "/media/mock-whatsApp-left.webp",
     heroMockupRight: "/media/mock-whatsApp-right.webp",
     gallery: [
       "/media/project-whatsapp-clone-cover.webp",
       "/media/project-whatsapp-clone-features.webp",
+    ],
+    galleryPreview: [
+      "/media/project-whatsapp-clone-cover-hd.webp",
+      "/media/project-whatsapp-clone-features-hd.webp",
     ],
     role: "Mobile developer",
     duration: "Supporting project",
@@ -375,10 +415,15 @@ export const projects: Project[] = [
       "EasyProd helps employees quickly find and manage product data using QR scanning and structured product records.",
     stack: ["Flutter", "QR Scanner", "Product Data", "Mobile Workflow"],
     thumbnail: "/media/project-easyprod-cover.webp",
+    thumbnailPreview: "/media/project-easyprod-cover-hd.webp",
     heroImage: "/media/project-easyprod-cover.webp",
     heroMockupLeft: "/media/mock-easyprod-left.webp",
     heroMockupRight: "/media/mock-easyprod-right.webp",
     gallery: ["/media/project-easyprod-cover.webp", "/media/project-easyprod-features.webp"],
+    galleryPreview: [
+      "/media/project-easyprod-cover-hd.webp",
+      "/media/project-easyprod-features-hd.webp",
+    ],
     role: "Mobile developer",
     duration: "Supporting project",
     featured: false,

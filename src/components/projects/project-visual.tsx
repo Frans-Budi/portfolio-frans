@@ -6,15 +6,22 @@ import { cn } from "@/lib/utils";
 
 type ProjectVisualProps = {
   src: string;
+  previewSrc?: string;
   alt: string;
   priority?: boolean;
   className?: string;
 };
 
-export function ProjectVisual({ src, alt, priority = false, className }: ProjectVisualProps) {
+export function ProjectVisual({
+  src,
+  previewSrc,
+  alt,
+  priority = false,
+  className,
+}: ProjectVisualProps) {
   return (
     <ImagePreviewDialog
-      src={src}
+      src={previewSrc ?? src}
       alt={alt}
       title={alt}
       triggerAriaLabel={`Open preview for ${alt}`}

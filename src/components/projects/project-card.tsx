@@ -18,6 +18,7 @@ export function ProjectCard({ project, priority = false }: ProjectCardProps) {
     <Card className="border-white/10 bg-card/80 py-0 transition duration-300 hover:-translate-y-1 hover:border-primary/35 hover:shadow-[0_24px_80px_rgba(0,0,0,0.28)]">
       <ProjectVisual
         src={project.thumbnail}
+        previewSrc={project.thumbnailPreview}
         alt={`${project.title} project preview`}
         priority={priority}
         className="rounded-b-none border-x-0 border-t-0"
