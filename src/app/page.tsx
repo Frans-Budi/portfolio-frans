@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CtaSection } from "@/components/sections/cta-section";
+import { RevealOnScroll } from "@/components/ui/reveal-on-scroll";
 import { SectionHeader } from "@/components/sections/section-header";
 import { StackCard } from "@/components/sections/stack-card";
 import { HeroVisual } from "@/components/projects/hero-visual";
@@ -70,7 +71,7 @@ export default function Home() {
       </section>
 
       <section id="about" className="section-shell section-base">
-        <div className="container-page py-16">
+        <RevealOnScroll className="container-page py-16">
           <div className="grid gap-6 lg:grid-cols-[0.4fr_1fr] lg:items-start lg:gap-8">
             <div className="order-1">
               <div className="relative mx-auto aspect-4/5 w-3/4 overflow-hidden rounded-3xl border border-white/10 bg-card/70 lg:w-full">
@@ -118,11 +119,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       <section className="section-shell section-alt">
-        <div className="container-page py-16">
+        <RevealOnScroll className="container-page py-16">
           <div className="mb-8 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <SectionHeader
               eyebrow="Featured Projects"
@@ -141,11 +142,11 @@ export default function Home() {
               <ProjectCard key={project.slug} project={project} priority={index < 2} />
             ))}
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       <section className="section-shell section-base section-motif">
-        <div className="container-page py-16">
+        <RevealOnScroll className="container-page py-16">
           <SectionHeader
             eyebrow="Core Stack"
             title="Capability-first stack for shipping real-world products."
@@ -156,11 +157,11 @@ export default function Home() {
               <StackCard key={group.title} group={group} />
             ))}
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       <section className="section-shell section-base">
-        <div className="container-page py-16">
+        <RevealOnScroll className="container-page py-16">
           <SectionHeader
             eyebrow="Experience"
             title="Credibility from freelance, internship, and startup execution."
@@ -184,11 +185,11 @@ export default function Home() {
               );
             })}
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       <section className="section-shell section-base">
-        <div className="container-page py-16">
+        <RevealOnScroll className="container-page py-16">
           <SectionHeader
             eyebrow="Learning & Education"
             title="Compact credibility from education and focused upskilling."
@@ -204,7 +205,7 @@ export default function Home() {
               </Card>
             ))}
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       <CtaSection />

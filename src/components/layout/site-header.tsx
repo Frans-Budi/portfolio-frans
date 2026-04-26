@@ -3,6 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useRef, useState } from "react";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -19,10 +21,51 @@ import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const isHomepage = pathname === "/";
+  const [isHeaderHidden, setIsHeaderHidden] = useState(false);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false);
+  const lastScrollY = useRef(0);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (!isHomepage) return;
+
+    const delta = latest - lastScrollY.current;
+
+    if (latest <= 24 || isSheetOpen || isProfileDialogOpen) {
+      setIsHeaderHidden(false);
+      lastScrollY.current = latest;
+      return;
+    }
+
+    if (Math.abs(delta) < 6) return;
+
+    if (delta > 0 && latest > 96) {
+      setIsHeaderHidden(true);
+    } else if (delta < 0) {
+      setIsHeaderHidden(false);
+    }
+
+    lastScrollY.current = latest;
+  });
+
+  const shouldHide = isHomepage && isHeaderHidden && !isSheetOpen && !isProfileDialogOpen;
 
   return (
     <>
-      <header className="sticky inset-x-0 top-0 z-50 w-full border-b border-white/10 bg-background/82 backdrop-blur-xl">
+      <motion.header
+        className={cn(
+          "sticky inset-x-0 top-0 z-50 w-full border-b border-white/10 bg-background/82 backdrop-blur-xl",
+          shouldHide && "pointer-events-none",
+        )}
+        initial={false}
+        animate={shouldHide ? { y: "-100%", opacity: 0.08 } : { y: "0%", opacity: 1 }}
+        transition={{
+          duration: 0.55,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+      >
         <div className="container-page flex h-14 md:h-16 items-center justify-between">
           <div className="flex items-center gap-3">
             <ImagePreviewDialog
@@ -31,6 +74,8 @@ export function SiteHeader() {
               title="Profile image preview"
               triggerAriaLabel="Open profile image"
               priority
+              open={isProfileDialogOpen}
+              onOpenChange={setIsProfileDialogOpen}
               trigger={
                 <button
                   type="button"
@@ -75,12 +120,15 @@ export function SiteHeader() {
           </nav>
 
           <div className="hidden md:block">
-            <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button
+              asChild
+              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-md"
+            >
               <Link href="/contact">Start a Project</Link>
             </Button>
           </div>
 
-          <Sheet>
+          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
                 <Menu />
@@ -111,7 +159,7 @@ export function SiteHeader() {
             </SheetContent>
           </Sheet>
         </div>
-      </header>
+      </motion.header>
     </>
   );
 }

@@ -23,6 +23,8 @@ type ImagePreviewDialogProps = {
   imageClassName?: string;
   contentClassName?: string;
   priority?: boolean;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 };
 
 export function ImagePreviewDialog({
@@ -36,9 +38,11 @@ export function ImagePreviewDialog({
   imageClassName = "object-cover",
   contentClassName = "max-w-md",
   priority = false,
+  open,
+  onOpenChange,
 }: ImagePreviewDialogProps) {
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogTrigger asChild aria-label={triggerAriaLabel}>
         {trigger}
       </DialogTrigger>

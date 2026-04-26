@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RevealOnScroll } from "@/components/ui/reveal-on-scroll";
 import { siteConfig } from "@/content/site";
 
 function CtaAssetIcon({ src, className }: { src: string; className: string }) {
@@ -25,7 +26,7 @@ function CtaAssetIcon({ src, className }: { src: string; className: string }) {
 export function CtaSection() {
   return (
     <section className="section-shell section-cta">
-      <div className="container-page py-16">
+      <RevealOnScroll className="container-page py-16">
         <div className="grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/3 md:grid-cols-[1.3fr_0.7fr]">
           <div className="p-8 sm:p-10 lg:p-12">
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-primary">
@@ -89,7 +90,7 @@ export function CtaSection() {
             </p>
           </div>
         </div>
-      </div>
+      </RevealOnScroll>
     </section>
   );
 }
