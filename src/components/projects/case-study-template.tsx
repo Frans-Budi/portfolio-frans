@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Project } from "@/content/projects";
 import { ProjectVisual } from "@/components/projects/project-visual";
+import { ProjectMockupHero } from "@/components/projects/project-mockup-hero";
 
 type CaseStudyTemplateProps = {
   project: Project;
@@ -22,19 +23,21 @@ export function CaseStudyTemplate({ project }: CaseStudyTemplateProps) {
           </Link>
         </Button>
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div className="reveal">
+          <div className="order-2 reveal lg:order-1">
             <Badge variant="outline" className="border-primary/30 text-primary">
               {project.category}
             </Badge>
             <h1 className="mt-5 font-heading text-4xl font-semibold tracking-tight sm:text-6xl">
               {project.title}
             </h1>
-            <p className="mt-5 text-lg leading-8 text-muted-foreground">
-              {project.longSummary}
-            </p>
+            <p className="mt-5 text-lg leading-8 text-muted-foreground">{project.longSummary}</p>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               <MetaItem icon={<UserRound className="size-4" />} label="Role" value={project.role} />
-              <MetaItem icon={<Calendar className="size-4" />} label="Duration" value={project.duration} />
+              <MetaItem
+                icon={<Calendar className="size-4" />}
+                label="Duration"
+                value={project.duration}
+              />
             </div>
             {project.demoUrl ? (
               <Button asChild className="mt-6 bg-primary text-primary-foreground">
@@ -45,11 +48,12 @@ export function CaseStudyTemplate({ project }: CaseStudyTemplateProps) {
               </Button>
             ) : null}
           </div>
-          <ProjectVisual
-            src={project.heroImage}
-            alt={`${project.title} case study hero`}
+          <ProjectMockupHero
+            leftSrc={project.heroMockupLeft ?? "/media/mock-cpay-left.webp"}
+            rightSrc={project.heroMockupRight ?? "/media/mock-cpay-right.webp"}
+            altBase={`${project.title} case study hero`}
             priority
-            className="min-h-[320px] lg:min-h-[520px]"
+            className="order-1 min-h-80 lg:order-2 lg:min-h-130"
           />
         </div>
       </section>
@@ -87,15 +91,13 @@ export function CaseStudyTemplate({ project }: CaseStudyTemplateProps) {
 
       <section className="container-page grid gap-8 py-12 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.26em] text-primary">
-            My Role
-          </p>
+          <p className="text-sm font-semibold uppercase tracking-[0.26em] text-primary">My Role</p>
           <h2 className="mt-4 font-heading text-3xl font-semibold">
             Product-minded execution across the stack.
           </h2>
           <p className="mt-4 leading-7 text-muted-foreground">
-            This case study emphasizes what I planned, implemented, integrated,
-            and shipped rather than only showing screens.
+            This case study emphasizes what I planned, implemented, integrated, and shipped rather
+            than only showing screens.
           </p>
         </div>
         <div className="grid gap-4">
@@ -140,7 +142,10 @@ export function CaseStudyTemplate({ project }: CaseStudyTemplateProps) {
             <div className="mt-6 rounded-2xl border border-white/10 bg-black/20 p-6">
               <ul className="grid gap-4">
                 {project.technicalHighlights.map((highlight) => (
-                  <li key={highlight} className="flex gap-3 text-sm leading-6 text-muted-foreground">
+                  <li
+                    key={highlight}
+                    className="flex gap-3 text-sm leading-6 text-muted-foreground"
+                  >
                     <span className="mt-2 size-2 rounded-full bg-primary shadow-[0_0_20px_rgba(92,225,230,0.7)]" />
                     {highlight}
                   </li>
@@ -149,7 +154,7 @@ export function CaseStudyTemplate({ project }: CaseStudyTemplateProps) {
               <Separator className="my-6 bg-white/10" />
               <div className="flex flex-wrap gap-2">
                 {project.stack.map((item) => (
-                  <Badge key={item} variant="secondary" className="bg-white/[0.06]">
+                  <Badge key={item} variant="secondary" className="bg-white/6">
                     {item}
                   </Badge>
                 ))}
@@ -180,7 +185,7 @@ export function CaseStudyTemplate({ project }: CaseStudyTemplateProps) {
               key={`${project.slug}-${image}`}
               src={image}
               alt={`${project.title} visual ${index + 1}`}
-              className="aspect-[4/3]"
+              className="aspect-video rounded-lg"
             />
           ))}
         </div>
@@ -189,17 +194,9 @@ export function CaseStudyTemplate({ project }: CaseStudyTemplateProps) {
   );
 }
 
-function MetaItem({
-  icon,
-  label,
-  value,
-}: {
-  icon: React.ReactNode;
-  label: string;
-  value: string;
-}) {
+function MetaItem({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+    <div className="rounded-2xl border border-white/10 bg-white/3 p-4">
       <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-primary">
         {icon}
         {label}

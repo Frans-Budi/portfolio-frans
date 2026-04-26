@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { ImagePreviewDialog } from "@/components/ui/image-preview-dialog";
 import { cn } from "@/lib/utils";

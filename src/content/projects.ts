@@ -9,6 +9,8 @@ export type Project = {
   stack: string[];
   thumbnail: string;
   heroImage: string;
+  heroMockupLeft?: string;
+  heroMockupRight?: string;
   gallery: string[];
   demoUrl?: string;
   role: string;
@@ -47,12 +49,15 @@ export const projects: Project[] = [
     ],
     thumbnail: "/media/project-cpay-cover.webp",
     heroImage: "/media/project-cpay-cover.webp",
+    heroMockupLeft: "/media/mock-cpay-left.webp",
+    heroMockupRight: "/media/mock-cpay-right.webp",
     gallery: [
       "/media/project-cpay-cover.webp",
       "/media/project-cpay-features.webp",
       "/media/project-cpay-web-cover.webp",
       "/media/project-cpay-web-features.webp",
     ],
+    demoUrl: "https://youtu.be/EiGg9tmOlE4?si=Wnd-zEYzC7hzC0td",
     role: "End-to-end freelance developer",
     duration: "Jul 2025 - Apr 2026",
     featured: true,
@@ -105,6 +110,8 @@ export const projects: Project[] = [
     stack: ["Flutter", "Firebase", "Cloud Functions", "Remote Config", "Offline-first"],
     thumbnail: "/media/project-fitlit-cover.webp",
     heroImage: "/media/project-fitlit-cover.webp",
+    heroMockupLeft: "/media/mock-fitlit-left.webp",
+    heroMockupRight: "/media/mock-fitlit-right.webp",
     gallery: ["/media/project-fitlit-cover.webp", "/media/project-fitlit-flow.svg"],
     demoUrl: "https://www.youtube.com/watch?v=wozB7r4sTOo",
     role: "Flutter mobile developer",
@@ -153,6 +160,8 @@ export const projects: Project[] = [
     stack: ["Startup CTO", "Product Strategy", "Mobile Product", "Validation", "Marketplace"],
     thumbnail: "/media/project-bangunaja-cover.webp",
     heroImage: "/media/project-bangunaja-cover.webp",
+    heroMockupLeft: "/media/mock-bangunAja-left.webp",
+    heroMockupRight: "/media/mock-bangunAja-right.webp",
     gallery: ["/media/project-bangunaja-cover.webp"],
     role: "CTO & Founder",
     duration: "Jan 2023 - Feb 2024",
@@ -196,6 +205,8 @@ export const projects: Project[] = [
     stack: ["Flutter", "Firebase", "Authentication", "Authorization", "Location"],
     thumbnail: "/media/project-presence-cover.webp",
     heroImage: "/media/project-presence-cover.webp",
+    heroMockupLeft: "/media/mock-presence-left.webp",
+    heroMockupRight: "/media/mock-presence-right.webp",
     gallery: ["/media/project-presence-cover.webp"],
     role: "Mobile developer",
     duration: "Supporting project",
@@ -235,6 +246,8 @@ export const projects: Project[] = [
     stack: ["Flutter", "OpenAI", "GPT", "DALL-E 3", "Whisper"],
     thumbnail: "/media/project-chatgpt-cover.webp",
     heroImage: "/media/project-chatgpt-cover.webp",
+    heroMockupLeft: "/media/mock-chatgpt-left.webp",
+    heroMockupRight: "/media/mock-chatgpt-right.webp",
     gallery: ["/media/project-chatgpt-cover.webp"],
     role: "Mobile developer",
     duration: "Supporting project",
@@ -278,6 +291,8 @@ export const projects: Project[] = [
     stack: ["Flutter", "Machine Learning", "Recommendation UX", "Firebase"],
     thumbnail: "/media/project-chefies-cover.webp",
     heroImage: "/media/project-chefies-cover.webp",
+    heroMockupLeft: "/media/mock-chefies-left.webp",
+    heroMockupRight: "/media/mock-chefies-right.webp",
     gallery: ["/media/project-chefies-cover.webp"],
     role: "Mobile developer",
     duration: "Supporting project",
@@ -317,6 +332,8 @@ export const projects: Project[] = [
     stack: ["Flutter", "Firebase", "OTP Auth", "Realtime Messaging", "Storage"],
     thumbnail: "/media/project-whatsapp-clone-cover.webp",
     heroImage: "/media/project-whatsapp-clone-cover.webp",
+    heroMockupLeft: "/media/mock-whatsApp-left.webp",
+    heroMockupRight: "/media/mock-whatsApp-right.webp",
     gallery: ["/media/project-whatsapp-clone-cover.webp"],
     role: "Mobile developer",
     duration: "Supporting project",
@@ -352,6 +369,8 @@ export const projects: Project[] = [
     stack: ["Flutter", "QR Scanner", "Product Data", "Mobile Workflow"],
     thumbnail: "/media/project-easyprod-cover.webp",
     heroImage: "/media/project-easyprod-cover.webp",
+    heroMockupLeft: "/media/mock-easyprod-left.webp",
+    heroMockupRight: "/media/mock-easyprod-right.webp",
     gallery: ["/media/project-easyprod-cover.webp"],
     role: "Mobile developer",
     duration: "Supporting project",
