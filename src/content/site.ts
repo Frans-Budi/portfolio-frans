@@ -22,7 +22,8 @@ export const siteConfig = {
   phone: "+62 821 7905 2096",
   whatsappUrl:
     "https://api.whatsapp.com/send/?phone=6282179052096&text&type=phone_number&app_absent=0",
-  resumeUrl: "/file/frans-budi-kashira-cv.pdf",
+  cvUrl: "/file/frans-budi-kashira-cv.pdf",
+  resumeUrl: "/file/Resume_Frans Budi Kashira.pdf",
 };
 
 export const navItems = [

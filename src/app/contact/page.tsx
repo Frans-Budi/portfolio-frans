@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeader } from "@/components/sections/section-header";
-import { siteConfig, socials } from "@/content/site";
+import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -15,8 +15,20 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <section className="container-page py-14">
-      <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-        <div>
+      <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[0.62fr_1fr] lg:items-center lg:gap-12">
+        <div className="order-1">
+          <div className="relative mx-auto aspect-4/5 w-2/3 overflow-hidden rounded-3xl border border-white/10 bg-card/70 sm:w-50 lg:mx-0 lg:w-full lg:max-w-sm">
+            <Image
+              src="/image/frans-transparant.webp"
+              alt="Frans Budi Kashira portrait"
+              fill
+              sizes="(max-width: 640px) 10rem, (max-width: 1024px) 12rem, 22rem"
+              className="object-contain object-bottom"
+            />
+          </div>
+        </div>
+
+        <div className="order-2">
           <SectionHeader
             eyebrow="Contact"
             title="Let’s discuss product work, mobile apps, or collaboration."
@@ -42,44 +54,6 @@ export default function ContactPage() {
               </Link>
             </Button>
           </div>
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {socials.map((social) => {
-            return (
-              <Card key={social.href} className="border-white/10 bg-card">
-                <CardContent className="p-6">
-                  <div className="flex size-11 items-center justify-center rounded-2xl border border-primary/20 bg-primary/8">
-                    <span
-                      className="size-5 bg-primary"
-                      aria-hidden="true"
-                      style={{
-                        WebkitMaskImage: `url("${social.logoSrc}")`,
-                        maskImage: `url("${social.logoSrc}")`,
-                        WebkitMaskPosition: "center",
-                        maskPosition: "center",
-                        WebkitMaskRepeat: "no-repeat",
-                        maskRepeat: "no-repeat",
-                        WebkitMaskSize: "contain",
-                        maskSize: "contain",
-                      }}
-                    />
-                  </div>
-                  <h2 className="mt-5 font-heading text-xl font-semibold">{social.label}</h2>
-                  <p className="mt-3 text-sm leading-6 text-muted-foreground">
-                    {social.priority
-                      ? "Primary professional channel for review, contact, or collaboration."
-                      : "Supporting channel for demos and deeper product proof."}
-                  </p>
-                  <Button asChild variant="ghost" className="mt-5 px-0 text-primary">
-                    <Link href={social.href} target="_blank" rel="noreferrer">
-                      Open
-                      <ArrowUpRight className="size-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            );
-          })}
         </div>
       </div>
     </section>
